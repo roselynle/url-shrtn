@@ -44,6 +44,7 @@ def home():
         # return short url if found
         if found_url:
             return redirect(url_for("display_short_url", url=found_url.short))
+        # if not found then create one
         else:
             short_url = shorten_url()
             print(short_url)
@@ -53,6 +54,18 @@ def home():
             return redirect(url_for("display_short_url", url=short_url))
     else:
         return render_template('home.html')
+
+@app.route('/<short_url>')
+def redirection(short_url):
+    long_url = Urls.query.filter_by(short=short_url).first()
+    if long_url:
+        return redirect(long_url.long)
+    else:
+        return f'<h1>Url doesnt exist</h1>'
+
+@app.route('/display/<url>')
+def display_short_url(url):
+    return render_template('shorturl.html', short_url_display=url)
 
 if __name__ == '__main__':
     app.run(debug=True)
