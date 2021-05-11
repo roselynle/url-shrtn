@@ -1,16 +1,16 @@
 {% extends "base.html" %}
-{% block title %}shorten URL{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
+<div id="main-form">
 <form action="#", method="post">
-    <label for="url">Enter an https:// URL:</label>
-
-    <input type="url" name="url" id="url"
-       placeholder="https://example.com"
-       pattern="https://.*" size="50"
+    <label for="url">Enter your URL:</label>
+    <input type="text" name="url" id="url"
+       placeholder="https://example.com" size="50"
        required>
     <br>
-    <input type="submit" value="submit" class="btn btn-primary">
+    <input type="submit" value="SUBMIT" class="btn btn-primary">
 </form>
+</div>
 
 {% endblock %}
