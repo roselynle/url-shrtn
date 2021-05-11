@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, abort
 from flask_sqlalchemy import SQLAlchemy
 import string
 import random
@@ -61,11 +61,23 @@ def redirection(short_url):
     if long_url:
         return redirect(long_url.long)
     else:
-        return f'<h1>Url doesnt exist</h1>'
+        abort(404)
 
 @app.route('/display/<url>')
 def display_short_url(url):
     return render_template('shorturl.html', short_url_display=url)
+
+@app.errorhandler(404)
+def handle_404(self):
+    return render_template('errors/404.html'), 404
+
+@app.errorhandler(400)
+def handle_400(self):
+    return render_template('errors/400.html'), 400
+
+@app.errorhandler(500)
+def handle_500(self):
+    return render_template('errors/500.html'), 500
 
 if __name__ == '__main__':
     app.run(debug=True)
