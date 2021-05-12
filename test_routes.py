@@ -23,12 +23,11 @@ def test_405_handling(api):
     assert resp.status == '405 METHOD NOT ALLOWED'
     assert b'That\'s Forbidden!' in resp.data
 
-# def test_post_url(api):
-#     form = {'url':'https://stackoverflow.com'}
-#     resp = api.post('/', data=form)
-#     assert resp.status == '200 OK'
-
-
+def test_post_url(api):
+    mock_form_data = {'url':'https://stackoverflow.com'}
+    resp = api.post('/', data=mock_form_data, follow_redirects=True)
+    assert resp.status == '200 OK'
+    assert b'Here is your shortened URL:' in resp.data
 
 # def test_short_url(api):
 #     resp = api.get("/dii")
