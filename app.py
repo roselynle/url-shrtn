@@ -71,9 +71,9 @@ def display_short_url(url):
 def handle_404(self):
     return render_template('errors/404.html'), 404
 
-@app.errorhandler(400)
+@app.errorhandler(405)
 def handle_400(self):
-    return render_template('errors/400.html'), 400
+    return render_template('errors/405.html'), 405
 
 @app.errorhandler(500)
 def handle_500(self):

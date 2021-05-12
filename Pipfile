@@ -9,6 +9,8 @@ flask-sqlalchemy = "*"
 gunicorn = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 
 [requires]
