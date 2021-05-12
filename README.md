@@ -1,6 +1,6 @@
 # Shrtn Ur URL
 
-A simple URL shortener built with Python/Flask, perfect for all the lazy web surfers out there! Users can submit any https:// formatted URLs and obtain a shortened version of it. For example the URL for the Flask User Guide, https://flask.palletsprojects.com/en/1.1.x/#user-s-guide has been shortened to https://shrtn-ur-url.herokuapp.com/PgLWA
+A simple URL shortener built with Python/Flask, perfect for all the lazy web surfers out there! Users can submit any https:// formatted URLs and obtain a shortened version of it. For example the URL for the Flask User Guide, https://flask.palletsprojects.com/en/1.1.x/#user-s-guide has been shortened to https://shrtn-ur-url.herokuapp.com/hyXDp
 
 This app was created by [@roselynle](https://github.com/roselynle) and [@FaisalY12](https://github.com/FaisalY12) as part of Futureproof's Coding Challenge.
 
