@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+
+{% block content %}
+    <h3>Here is your shortened URL:</h3>
+    <p>https://shrtn-ur-url.herokuapp.com/{{short_url_display}}</p>
+    <a class="btn btn-primary" target="_blank" href="https://shrtn-ur-url.herokuapp.com/{{short_url_display}}">VISIT PAGE</a>
+    <a class="btn btn-primary" href="https://shrtn-ur-url.herokuapp.com/">BACK TO HOME</a>
+{% endblock %}
