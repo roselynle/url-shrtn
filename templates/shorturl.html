@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+<<<<<<< HEAD
 {% block title %}shorten URL{% endblock %}
 
 {% block content %}
@@ -12,4 +13,13 @@
     <br>
     <input type="submit" value="submit" class="btn btn-primary">
 </form>
+=======
+{% block title %}{% endblock %}
+
+{% block content %}
+    <h3>Here is your shortened URL:</h3>
+    <p>https://shrtn-ur-url.herokuapp.com/{{short_url_display}}</p>
+    <a class="btn btn-primary" href="https://shrtn-ur-url.herokuapp.com/{{short_url_display}}">VISIT PAGE</a>
+    <a class="btn btn-primary" href="https://shrtn-ur-url.herokuapp.com/">BACK TO HOME</a>
+>>>>>>> c1ab7491fc39c97ee169b2226fe988f81a6db33f
 {% endblock %}
