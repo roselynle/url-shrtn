@@ -1,6 +1,6 @@
 # Shrtn Ur URL
 
-A simple URL shortener built with Python/Flask, perfect for all the lazy web surfers out there! Users can submit any https:// formatted URLs and obtain a shorted version of it. For example the URL for the Flask User Guide, https://flask.palletsprojects.com/en/1.1.x/#user-s-guide has been shortened to https://shrtn-ur-url.herokuapp.com/PgLWA
+A simple URL shortener built with Python/Flask, perfect for all the lazy web surfers out there! Users can submit any https:// formatted URLs and obtain a shortened version of it. For example the URL for the Flask User Guide, https://flask.palletsprojects.com/en/1.1.x/#user-s-guide has been shortened to https://shrtn-ur-url.herokuapp.com/PgLWA
 
 This app was created by [@roselynle](https://github.com/roselynle) and [@FaisalY12](https://github.com/FaisalY12) as part of Futureproof's Coding Challenge.
 
@@ -27,9 +27,10 @@ Deployed site can be accessed here: https://shrtn-ur-url.herokuapp.com/
 -   Set up Flask App file structure from scratch
 -   Create model and required routes
 -   Configure the database
--   Implement logic for shortening the url and redirecting the user
+-   Implement logic for shortening the URL and redirecting the user
 -   Create template html files for rendering
 -   Add styling to improve user interface
+-   Write tests
 
 ## Task Requirements
 
@@ -51,8 +52,8 @@ Deployed site can be accessed here: https://shrtn-ur-url.herokuapp.com/
 
 ### Challenges
 
--   Writing tests e.g. not knowing how to mock a 500 error code
--   Not being able to get it to work with www. formatted URLs
+-   Writing tests e.g. not knowing how to mock a 500 error code or test the short url since it searches the db for the corresponding long url
+-   Not being able to get it to work with www formatted URLs
 
 ## Bugs
 
